@@ -7,18 +7,18 @@ console.log("hello")
 
  function getComputerChoice()
  {
-    const num = Math.floor(Math.random() * 10) % 3;
+    const num = Math.floor(Math.random() * 10 + 1) % 3;
     console.log(num)
     if (num == 0) {
-        choice = "rock"
+        comp = "rock"
     }
     else if (num == 1) {
-        choice = "paper"
+        comp = "paper"
     }
     else {
-        choice = "scissors"
+        comp = "scissors"
     }
-    return choice
+    return comp
     
  }
  console.log(getComputerChoice())
