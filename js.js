@@ -1,5 +1,9 @@
 console.log("hello")
 
+// Declare variables
+let comp = '';
+let human = '';
+
  ///getcomputerchoice: increase math.random by factor of ten
  //average down to nearest whole number
  //and % 3
@@ -10,13 +14,13 @@ console.log("hello")
     const num = Math.floor(Math.random() * 10 + 1) % 3;
     console.log(num)
     if (num == 0) {
-        comp = "rock"
+       var comp = "rock"
     }
     else if (num == 1) {
-        comp = "paper"
+       var comp = "paper"
     }
     else {
-        comp = "scissors"
+       var comp = "scissors"
     }
     return comp
     
@@ -26,4 +30,20 @@ console.log("hello")
  //loop to repeat prompt if user enters something other than rock paper or scissors
  //user input is reduced to same case (lower case) as computer
  //assign choice = input
-//  let choice = prompt("rock, paper or scissors?")
+ function getHumanChoice()
+ {
+    let human = prompt("rock, paper or scissors?");
+    while (human.toLowerCase() !== 'rock' &&
+            human.toLowerCase() !== 'paper' &&
+            human.toLowerCase() !== 'scissors') {
+        human = prompt("rock, paper, scissor:")
+    }
+  return human
+  
+ 
+ }
+ // assign values from functions to global constants
+ const humChoice = getHumanChoice()
+ const compChoice = getComputerChoice()
+ console.log(alert( humChoice == 'rock'))
+ 
