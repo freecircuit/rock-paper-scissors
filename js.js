@@ -43,11 +43,67 @@ console.log("hello")
  const compChoice = getComputerChoice().toLowerCase()
  console.log(humChoice)
  console.log(compChoice)
- 
-humanScore = 0
-computerScore = 0
 
+ 
+    var humanScore = 0
+    var computerScore = 0
+    
 // create function for single round of game
 //take inputs from computer and user to utilize as variables of the function
+//set relationdship between rock, paper and scissors according to rules of the game
 //use switch statement for variable comparison, resulting increment of score, and text declaring winner/loser
 //
+function playRound(humanChoice, computerChoice){
+
+
+
+     if (humanChoice == "rock" && 
+        computerChoice == "scissors"){
+            humanScore += 1
+            alert("You win! Rock bests Scissors");
+     }
+     else if (humanChoice == "rock" &&
+            computerChoice == "paper"){
+                computerScore += 1
+                alert("You Lose! Paper beats Rock")
+            }
+    else if(humanChoice == "paper" &&   
+            computerChoice == "rock"){
+                humanScore += 1
+                alert("You Win! Paper beats Rock!")
+            }
+    else if(humanChoice == "paper" &&
+            computerChoice == "scissors"){
+                computerScore += 1
+                alert("You Lose! Scissors beats Rock!")
+            }
+    else if(humanChoice == "scissors" &&
+            computerChoice == "rock"){
+                computerScore += 1
+                alert("You Lose! Rock beats Scissors!")
+            }
+    else if(humanChoice == "scissors" &&
+            computerChoice == "paper"){
+            humanScore += 1
+            alert("You Win! Scissors beats Paper!")
+            }
+    else{
+        alert("It's a tie!")
+    }
+
+   
+    // switch (humChoice) {
+    //     case "rock" 
+    //         humanScore + 1;
+    //          
+    //         break;
+        
+    
+
+    //     default:
+    //         break;
+    // }
+}
+// console.log(playRound(humChoice, compChoice))
+console.log(humanScore)
+console.log(computerScore)
