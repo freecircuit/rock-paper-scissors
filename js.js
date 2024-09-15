@@ -47,3 +47,7 @@ console.log("hello")
 humanScore = 0
 computerScore = 0
 
+// create function for single round of game
+//take inputs from computer and user to utilize as variables of the function
+//use switch statement for variable comparison, resulting increment of score, and text declaring winner/loser
+//
