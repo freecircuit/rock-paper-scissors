@@ -40,10 +40,10 @@ console.log("hello")
  
  }
  // assign values from functions to global constants
- var humChoice = getHumanChoice().toLowerCase()
- var compChoice = getComputerChoice().toLowerCase()
-//  console.log(humChoice)
-//  console.log(compChoice)
+ const humChoice = getHumanChoice().toLowerCase()
+ const compChoice = getComputerChoice().toLowerCase()
+ console.log(humChoice)
+ console.log(compChoice)
 
  
     var humanScore = 0
@@ -57,6 +57,14 @@ console.log("hello")
 var y = humanScore
 var x = computerScore
 
+function add(g, h){
+    if (g > x){
+        return computerScore
+    }
+    else if (h > y){
+        return humanScore
+        }
+}
 
 function playRound(humanChoice, computerChoice){
     
@@ -94,51 +102,32 @@ function playRound(humanChoice, computerChoice){
         alert("It's a tie!")
     }
 
-    // if(humanScore > x){
-    //     return humanScore
-    // }
-    // else if(computerScore > y){
-    //     return computerScore
-    // }
-    // else{
-    //     return 0;
-    // }
+    if(humanScore > x){
+        return humanScore
+    }
+    else if(computerScore > y){
+        return computerScore
+    }
 
 }
-// console.log(playRound(humChoice, compChoice))
+console.log(playRound(humChoice, compChoice))
 
-// console.log(humanScore)
-// console.log(computerScore)
+console.log(humanScore)
+console.log(computerScore)
 // const n = playRound(humChoice, compChoice)
-console.log(playGame(humanScore, computerScore))
+// console.log(playGame())
 
 
-// function playGame(x, y){
-//     x = humanScore 
-//     y = computerScore 
-//     var ch = getComputerChoice()
-//     var cho = getHumanChoice()
-
-//     while(humanScore < 5 && computerScore < 5){
-//         playRound(cho, ch)
-//         console.log(`your score `, humanScore, `vs computer `, computerScore)
-//         playGame(x, y)
+// function playGame(){
+//     x = humanScore + x
+//     y = computerScore + y
+//     do{
+//         getComputerChoice();
+//         getHumanChoice();
+//         playRound(humChoice, compChoice);
+        
 //     }
-//     while(humanScore >= 5 || computerScore >= 5){
-//     if(humanScore == 5){
-//         console.log("you win!!")
-//         break
-//     }
-//     else if(computerScore == 5){
-//         console.log("you lose!!")
-//         break
-//     }}
+//     while( x > 5 || y > 5)
         
 
-
-        
-
-}
-
-
-
+// }
