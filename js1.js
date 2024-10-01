@@ -1,27 +1,15 @@
 
 // attatch mouse click to button values
 const buttons = document.querySelectorAll("button");
-const rockBtn = document.getElementById("rock");
-const paperBtn = document.getElementById("paper");
-const scissorsBtn = document.getElementById("scissors");
 var humanScore = 0
 var computerScore = 0
 
-rockBtn.addEventListener("click", (e)=> {
-    let computerChoice = getComputerChoice()
-    playRound(e.target.id, computerChoice);
+buttons.forEach ((button) => {
+    button.addEventListener("click", (e) => {
+        let computerChoice = getComputerChoice()
+        playRound(e.target.id, computerChoice);
+    })
 })
-
-paperBtn.addEventListener("click", (e)=> {
-    let computerChoice = getComputerChoice()
-    playRound(e.target.id, computerChoice);
-})
-
-scissorsBtn.addEventListener("click", (e)=> {
-    let computerChoice = getComputerChoice()
-    playRound(e.target.id, computerChoice);
-})
-
 
 function getComputerChoice()
 {
