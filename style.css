@@ -1,0 +1,36 @@
+body{
+    display: flex;
+    justify-content:space-evenly;
+    flex-direction: column;
+}
+button{
+    color: #ffffff;
+    background-color: rgb(103, 0, 163);
+    padding: 10px 30px;
+    font-weight: 800;
+    border-color: #2b299e;
+    margin: 10px;
+    border-radius: 10%;
+}
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+#scoreContain{
+    display: flex;
+    justify-content: center;
+}
+#Score{
+    display: flex;
+    flex-direction: column;
+    background-color: bisque;
+    max-width: 220px;
+    gap: 20px;
+    border: double;
+    border-width: 2px;
+}
+.innerScore{
+    display: flex;
+    justify-content: space-evenly;
+}

@@ -1,37 +1,49 @@
 
-// getComputerChoice();
-// playRound();
-
 // attatch mouse click to button values
 const buttons = document.querySelectorAll("button");
-var humChoice = document.querySelectorAll("input");
+const rockBtn = document.getElementById("rock");
+const paperBtn = document.getElementById("paper");
+const scissorsBtn = document.getElementById("scissors");
+var humanScore = 0
+var computerScore = 0
 
-buttons.forEach((button) => {
-    button.addEventListener("click", (e) => {
-        console.log(e.target.id);
-        var humChoice = document.getElementById('humChoice');
-        humChoice.innerHTML = '<h3> '+e.target.id+'</h3>'
-
-
-        
-
-        var computerChoice = getComputerChoice().toLocaleLowerCase();
-        var humanChoice = e.target.id;
-
-        var compChoice = document.getElementById('computerChoice');
-        compChoice.innerHTML = '<h3> '+computerChoice+'</h3>'
-        playRound(humanChoice, computerChoice);
-
-
-
-    })
+rockBtn.addEventListener("click", (e)=> {
+    let computerChoice = getComputerChoice()
+    playRound(e.target.id, computerChoice);
 })
 
-// play round function
+paperBtn.addEventListener("click", (e)=> {
+    let computerChoice = getComputerChoice()
+    playRound(e.target.id, computerChoice);
+})
+
+scissorsBtn.addEventListener("click", (e)=> {
+    let computerChoice = getComputerChoice()
+    playRound(e.target.id, computerChoice);
+})
+
+
+function getComputerChoice()
+{
+   const num = Math.floor(Math.random() * 10 + 1) % 3;
+   // console.log(num)
+   if (num == 0) {
+      var comp = "rock"
+   }
+   else if (num == 1) {
+      var comp = "paper"
+   }
+   else {
+      var comp = "scissors"
+   }
+   return comp
+}
 
 function playRound(humanChoice, computerChoice){
-    var humanScore = 0
-    var computerScore = 0
+    var score = document.getElementById("Score");
+    var humScore = document.getElementById("humChoice");
+    var compScore = document.getElementById("computerChoice")
+    
     if (humanChoice == "rock" && 
        computerChoice == "scissors"){
            humanScore ++
@@ -64,21 +76,16 @@ function playRound(humanChoice, computerChoice){
            }
    else{
        alert("It's a tie!")
-   }}
+   }
 
-// Computer input:
-function getComputerChoice()
-{
-   const num = Math.floor(Math.random() * 10 + 1) % 3;
-   if (num == 0) {
-      var comp = "rock"
+   if(humanScore >= 5){
+    score.textContent = "You Win!!";
+    computerScore = 0
    }
-   else if (num == 1) {
-      var comp = "paper"
+   else if(computerScore >= 5){
+    score.textContent = "You Lose!!";
+    humanScore = 0
    }
-   else {
-      var comp = "scissors"
-   }
-   return comp
-   
-}
+   else{
+    humScore.textContent = "your score: " + humanScore;
+   compScore.textContent = "computer score: " + computerScore;}}

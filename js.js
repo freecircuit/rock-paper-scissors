@@ -113,32 +113,32 @@ function playRound(humanChoice, computerChoice){
 console.log(playGame(humanScore, computerScore))
 
 
-// function playGame(x, y){
-//     x = humanScore 
-//     y = computerScore 
-//     var ch = getComputerChoice()
-//     var cho = getHumanChoice()
+function playGame(x, y){
+    x = humanScore 
+    y = computerScore 
+    var ch = getComputerChoice()
+    var cho = getHumanChoice()
 
-//     while(humanScore < 5 && computerScore < 5){
-//         playRound(cho, ch)
-//         console.log(`your score `, humanScore, `vs computer `, computerScore)
-//         playGame(x, y)
-//     }
-//     while(humanScore >= 5 || computerScore >= 5){
-//     if(humanScore == 5){
-//         console.log("you win!!")
-//         break
-//     }
-//     else if(computerScore == 5){
-//         console.log("you lose!!")
-//         break
-//     }}
+    while(humanScore < 5 && computerScore < 5){
+        playRound(cho, ch)
+        console.log(`your score `, humanScore, `vs computer `, computerScore)
+        playGame(x, y)
+    }
+    while(humanScore >= 5 || computerScore >= 5){
+    if(humanScore == 5){
+        console.log("you win!!")
+        break
+    }
+    else if(computerScore == 5){
+        console.log("you lose!!")
+        break
+    }}
         
 
 
         
 
-}
+// }
 
 
 
